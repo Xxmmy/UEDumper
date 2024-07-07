@@ -25,6 +25,11 @@ bool windows::HelloWindow::render()
 
 	const ImVec2 bigWindow = IGHelper::getWindowSize();
 
+	if (projectName[0] == 0)
+	{
+		strcpy_s(projectName, "MadGlobal");
+	}
+
 
 	//if we dont show engine infos render the new project child
 	if (!showEngineInfos)
@@ -108,9 +113,14 @@ bool windows::HelloWindow::render()
 
 		else
 		{
+			if (processName[0] == 0)
+			{
+				strcpy_s(processName, "MadGlobal-Win64-Shipping.exe");
+			}
+
 			ImGui::PushItemWidth(350);
 			ImGui::Text("Enter running UE Game name");
-			ImGui::InputTextWithHint("##gameNameInput", "UEGame-Win64-Shipping.exe", processName, sizeof(processName));
+			ImGui::InputTextWithHint("##gameNameInput", "MadGlobal-Win64-Shipping.exe", processName, sizeof(processName));
 			ImGui::PopItemWidth();
 			ImGui::SameLine();
 

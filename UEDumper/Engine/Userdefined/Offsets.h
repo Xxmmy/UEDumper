@@ -102,11 +102,11 @@ struct Offset
 
 inline std::vector<Offset> setOffsets()
 {
-	std::vector<Offset> offsets;
+	std::vector<Offset> offsets; 
 
-	offsets.push_back({ OFFSET_ADDRESS | OFFSET_DS, "OFFSET_GNAMES", 0x562D340 });
-	offsets.push_back({ OFFSET_ADDRESS | OFFSET_DS, "OFFSET_GOBJECTS", 0x545C6E0 });
-	offsets.push_back({ OFFSET_ADDRESS | OFFSET_DS | OFFSET_LIVE_EDITOR, "OFFSET_UWORLD", 0x581A7E0 });
+	offsets.push_back({ OFFSET_ADDRESS | OFFSET_DS, "OFFSET_GNAMES",	0x0000000007BB6F80 });
+	offsets.push_back({ OFFSET_ADDRESS | OFFSET_DS, "OFFSET_GOBJECTS",	0x0000000007C56650 });
+	offsets.push_back({ OFFSET_ADDRESS | OFFSET_DS | OFFSET_LIVE_EDITOR, "OFFSET_UWORLD",  0x0000000007DAE418 });
 
 	//offsets.push_back({ OFFSET_ADDRESS | OFFSET_DH, "OFFSET_GNAMES", 0x562D340 });
 	//offsets.push_back({ OFFSET_ADDRESS | OFFSET_DH, "OFFSET_GOBJECTS", 0x545C6E0 });
